@@ -1,0 +1,41 @@
+{
+    "setting": {
+        "zoom": 1,
+        "svgWidth": "100%",
+        "svgHeight": "100%",
+        "draggable": true,
+        "editing": true,
+        "multiLine": false
+    },
+    "object": [ {
+        "left": 502,
+        "top": 196,
+        "id": "node7654611922",
+        "container": {
+            "type": "circle",
+            "fill": "#a7acb8",
+            "fill-opacity": 1,
+            "stroke": "#000000",
+            "stroke-width": 0,
+            "width": 30,
+            "height": 30
+        },
+        "content": {
+            "type": "path",
+            "source": "tagNormal",
+            "fill": "#ffffff",
+            "fill-opacity": 1,
+            "scaleX": .30000001192092896,
+            "scaleY": .30000001192092896
+        },
+        "title": {
+            "text": "普通步骤",
+            "style": {
+                "fill": "#666666",
+                "text-anchor": "middle",
+                "size": 12
+            }
+        }
+    } ],
+    "line": []
+}

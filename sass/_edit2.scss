@@ -1,0 +1,33 @@
+
+.wrapper {
+    padding: 50px 45px 0 60px;
+}
+
+.tool {
+    right:0px;
+}
+
+.fodder {
+    width: 60px;
+}
+
+.fodder_body {
+    width: 60px;
+    .shape {
+        li {
+            width:60px;
+            height: 60px;
+            line-height: 60px;
+
+            border-bottom: 1px solid #ddd;
+            &:nth-child(2n+1) {
+                border-right: 1px solid #ddd;
+            }
+        }
+    }
+}
+
+
+
+
+

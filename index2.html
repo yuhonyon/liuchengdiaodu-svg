@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/uscene2.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="header_body">
+            <p><i class="icon-u-file"></i>&nbsp;计费系统流程监控</p>
+        </div>
+        <ul class="header_right">
+         
+            <li>
+                <a href="###" id="drawSet">设置</a>
+            </li>
+            <li>
+                <label for="loadJSON" class="loadJSON">导入JSON
+                    <input type="file" id="loadJSON" accept=".json">
+                </label>
+            </li>
+            <li>
+                <a href="###" id="saveSVG">导出SVG</a>
+            </li>
+            <li>
+                <a href="###" id="saveJson">导出JSON</a>
+            </li>
+             <li>
+                <a href="###" id="saveImg">导出图片</a>
+            </li>
+            <li>
+                <a href="">退出</a>
+            </li>
+        </ul>
+    </div>
+    
+
+        <div class="editor">
+            <div id="draw">
+            </div>
+        </div>
+
+
+        <div class="fodder">
+            
+            <div class="fodder_body scroll">
+                <ul class="shape">
+                    <li data-src="images/001.svg" data-path="tagEnd" data-type="path" data-name="名称">
+                        <img src="images/001.svg" draggable="false" alt="">
+                    </li>
+                    <li data-src="images/002.svg" data-path="tagRerun" data-type="path" data-name="名称">
+                        <img src="images/002.svg" draggable="false" alt="">
+                    </li>
+                    <li data-src="images/003.svg" data-path="tagException" data-type="path" data-name="名称">
+                        <img src="images/003.svg" draggable="false" alt="">
+                    </li>
+                    <li data-src="images/004.svg" data-path="tagRunning" data-type="path" data-name="名称">
+                        <img src="images/004.svg" draggable="false" alt="">
+                    </li>
+                    <li data-src="images/005.svg" data-path="tagNormal" data-type="path" data-name="普通步骤">
+                        <img src="images/005.svg" draggable="false" alt="">
+                    </li>
+                    <li data-src="images/006.svg" data-path="tagLock" data-type="path" data-name="加锁步骤">
+                        <img src="images/006.svg" draggable="false" alt="">
+                    </li>
+                    <li data-src="images/007.svg" data-path="tagChoose" data-type="path" data-name="名称">
+                        <img src="images/007.svg" draggable="false" alt="">
+                    </li>
+                    <li data-src="images/008.svg" data-path="tagPause" data-type="path" data-name="名称">
+                        <img src="images/008.svg" draggable="false" alt="">
+                    </li>
+                    <li data-src="images/009.svg" data-path="tagImport" data-type="path" data-name="名称">
+                        <img src="images/009.svg" draggable="false" alt="">
+                    </li>
+                    <li data-src="images/010.svg" data-path="tagManual" data-type="path" data-name="名称">
+                        <img src="images/010.svg" draggable="false" alt="">
+                    </li>
+        
+         
+                </ul>
+     
+            </div>
+        </div>
+        
+        <ul class="tool">
+            <li id="tool_pointer">
+                <i class="icon-u-pointer"></i>
+            </li>
+            <li id="tool_straightLine">
+                <i class="icon-u-line2"></i>
+            </li>
+            <li id="tool_brokenLine">
+                <i class="icon-u-broken-line"></i>
+            </li>
+            <li id="tool_zoomOut">
+                <i class="icon-u-zoom-out"></i>
+            </li>
+            <li id="tool_zoomIn">
+                <i class="icon-u-zoom-in"></i>
+            </li>
+            <li id="tool_zoom">
+                <i class="icon-u-zoom"></i>
+            </li>
+            <li id="tool_grid">
+                <i class="icon-u-gird"></i>
+            </li>
+
+            <li id="tool_test">
+                <i>test</i>
+            </li>
+        </ul>
+ 
+    </div>
+
+    <ul class="rightMenu">
+        <li><a id="rightMenu_remove_btn" href="javascript:void(0);">删除</a></li>
+        <li><a id="rightMenu_copy_btn" href="javascript:void(0);">复制</a></li>
+        <li><a id="rightMenu_paste_btn" href="javascript:void(0);">粘贴</a></li>
+        <li><a id="rightMenu_top_btn" href="javascript:void(0);">置顶显示</a></li>
+        <li><a id="rightMenu_bottom_btn" href="javascript:void(0);">置底显示</a></li>
+        <li><a id="rightMenu_save_btn" href="javascript:void(0);">保存到缓存</a></li>
+        <li><a id="rightMenu_clear_btn" href="javascript:void(0);">清空画布</a></li>
+    </ul>
+    <div id="dragImg">
+        <img draggable="false" src="" alt="">
+    </div>
+    <div class="pop popSave">
+        <h3>导出结果: <a href="javascript:void(0);">X</a></h3>
+        <div>
+            
+        </div>
+    </div>
+
+    <div class="pop popSet">
+        <h3>设置: <a href="javascript:void(0);">X</a></h3>
+        <div>
+            <div>
+                <label for="">可拖拽(暂无效)<input type="checkbox"></label>
+                <label for="">多线(暂无效)<input type="checkbox"></label>
+                <label for="">编辑模式(暂无效)<input type="checkbox"></label>
+            </div>
+            <div>
+                <label for="">画布宽</label><input id="set_svgWidth" type="text">
+            </div>
+            <div>
+                <label for="">画布高</label><input id="set_svgHeight" type="text">
+            </div>
+            <div>
+                 <label for="">缩放比例</label><input id="set_zoom" type="text">
+            </div>
+            
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+
+    
+    <script src="js/svg.min.js"></script>
+    <script src="js/uscene.js"></script>
+    <script src="js/editing.js"></script>
+</body>
+<script>
+
+$('.scroll').niceScroll({
+    cursorcolor: "rgba(0,0,0,.3)",
+    cursorwidth: "5px",
+    cursorborder: "0",
+    cursorborderradius: "5px",
+    background: "rgba(0,0,0,.1)",
+});
+
+$(".fodder_nav li").click(function() {
+    $(".fodder_nav li").removeClass("active");
+    $(this).addClass("active");
+    $(".fodder_body>*").hide();
+    $($(this).attr("data-body")).show();
+})
+
+$(".attr_nav a").click(function() {
+    $(".attr_nav a").removeClass("active");
+    $(this).addClass("active");
+    $(".attr>.scroll").hide();
+    $($(this).attr("data-body")).show();
+})
+
+$(".pop a").click(function() {
+    $(".pop").hide();
+
+})
+</script>
+
+</html>

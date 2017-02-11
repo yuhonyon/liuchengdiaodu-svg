@@ -1,0 +1,40 @@
+
+#draw {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#draw>svg {
+    transform-origin: 0% 0%;
+    float: left;
+    cursor: default;
+    border: 2px solid #ddd;
+}
+
+polyline[id^="line"]:hover {
+    stroke: #09c;
+    cursor: pointer;
+}
+
+text {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+g[id^="node"] {
+    cursor: pointer;
+}
+
+.line_animation {
+    stroke-dashoffset: 1000;
+    animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
